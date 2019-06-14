@@ -1,0 +1,18 @@
+<h1>Episode #: <%=@episode.number%></h1>
+<h1>Episode date: <%=@episode.date%></h1>
+<div>
+    <ul>Guests:
+         <% @episode.guests.each do |guest|%> 
+       <li> <%= guest.name %></li>
+        <%end%>
+    <ul>
+</div>
+<div>
+    <ul>
+        <li> Rating:<% @episode.appearances.each do |appearance|%> </li>
+        <%= appearance.rating %>
+        <%end%>
+    <ul>
+</div>
+
+<%= link_to 'Appearances Home', appearances_path %>
