@@ -26,7 +26,6 @@ class GuestsController < ApplicationController
       guest: [
         :name,
         :occupation,
-        :appearances
       ]
     )
   end

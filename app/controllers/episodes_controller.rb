@@ -25,7 +25,7 @@ class EpisodesController < ApplicationController
     params.permit(
       episode: [
         :date,
-        :number,
+        :number
       ]
     )
   end
