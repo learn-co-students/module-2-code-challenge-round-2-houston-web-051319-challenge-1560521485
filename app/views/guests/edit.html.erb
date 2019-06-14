@@ -1,0 +1,21 @@
+<h1>Edit Guest</h1>
+
+<%=form_for @guest, url: guests_path do |f| %>
+        
+
+<p>
+        <%= f.label :name %>
+        <%= f.text_field :name %><br>
+
+        <%= f.label :occupation %> 
+        <%= f.text_field :occupation %><br>
+
+</p>
+
+
+<p>
+    <%= f.submit%><br>
+    
+</p>
+        
+<% end %>
