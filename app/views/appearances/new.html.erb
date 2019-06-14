@@ -1,0 +1,32 @@
+<h1>Create an Appearance</h1>
+<ul>
+    <% @errors.each do |category,messages| %>
+        <li><%= category %></li>
+        <ul>
+            <% messages.each do |message| %>
+                <%= content_tag(:li, message)%>
+            <% end %>
+        </ul>
+    <% end %>
+</ul>
+
+<%= form_with model: Appearance.new do |f| %>
+
+<div>
+    <%= f.label :guest %>
+    <%= f.collection_select :guest_id, Guest.all, :id, :name %>
+</div>
+
+<div>
+    <%= f.label :episode %>
+    <%= f.collection_select :episode_id, Episode.all, :id, :number %>
+</div>
+
+<div>
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+</div>
+
+<%= f.submit %>
+
+<% end %>
