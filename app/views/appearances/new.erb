@@ -1,0 +1,9 @@
+<%=form_with model: Appearance.new do |f|%>
+    <%=f.label :episodes%>
+    <%=f.collection_select(:episode_id, Episode.all, :id, :number)%>
+    <%=f.label :guests%>
+    <%=f.collection_select(:guest_id, Guest.all, :id, :name)%>
+    <%=f.label :rating%>
+    <%= number_field(:appearance, :rating, in: 1..5, step: 1) %>
+    <%=f.submit%>
+<%end%>
