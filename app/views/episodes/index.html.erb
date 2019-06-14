@@ -3,5 +3,10 @@
 <ul>
   <% @episodes.each do |episode| %>
     <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
+    <a href = '/episodes/<%=episode.id%>'><button> - Episode Page</button></a>
   <% end %>
 </ul>
+
+<a href = '/episodes/new'><button>Create Episode</button></a><br><br>
+<a href = '/guests'><button>Guest Index</button></a><br><br>
+<a href = '/appearances'><button>Appearance Index</button></a>

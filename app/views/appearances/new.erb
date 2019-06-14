@@ -1,0 +1,31 @@
+<h1>Create Appearance</h1>
+
+<form method='POST' action = '/appearances'>
+    <div>
+        <label>Guest Rating</label>
+        <input name = 'guest_rating' type = 'text'>
+    </div>
+    <div>
+        <label>Guest: </label>
+            <select name = 'guest_id'>
+                <% @guests.each do | guest | %>
+                    <option value = '<%=guest.id%>'><%=guest.name%></option>
+                <%end%>
+        </select>
+    </div>
+    <div>
+        <label>Episode: </label >
+            <select name = 'episode_id'>
+                <% @episodes.each do | episode | %>
+                    <option value = '<%=episode.id%>'><%=episode.date%></option>
+                <%end%>
+            </select>
+    </div><br>
+
+    <button>Create New Appearance</button>
+
+</form><br>
+
+<a href = '/appearances'><button>Appearances Index</button></a>
+
+
