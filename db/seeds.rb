@@ -25,3 +25,15 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+# guest =Guest.create( name: "feven", occupation: "teacher", episode_id: episode1.id)
+# guest2 =Guest.create( name: "fevennn", occupation: "teacherr", episode_id: episode2.id)
+# guest3 =Guest.create( name: "fevennn", occupation: "teacher", episode_id: episode3.id)
+
+
+
+
+
+
+
+
+
