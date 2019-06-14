@@ -2,6 +2,7 @@
 
 <ul>
   <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    
+    <a href= <%= "/guests/#{guest.id}" %>><h1><%="#{guest.name}#{guest.occupation}"%></h1></a>
   <% end %>
 </ul>
