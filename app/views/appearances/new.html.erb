@@ -1,0 +1,7 @@
+<h2>Create New Appearance</h2>
+<%= form_for @appearance do | i | %>
+<%= i.collection_select :guest_id, Guest.all, :id, :name %>
+<%= i.label :rating %>
+<%= i.select :rating, [1], [2], [3], [4], [5] %>
+<%= i.submit %>
+<% end %>
