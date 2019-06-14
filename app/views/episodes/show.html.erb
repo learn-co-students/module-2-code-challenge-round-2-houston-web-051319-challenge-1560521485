@@ -1,0 +1,3 @@
+<h1>Episode <%= @episode.number %></h1>
+
+<%= "Episode #{@episode.number} - #{@episode.date.strftime("%B %d, %Y")} - #{@episode.guests.map {|guest|guest.name}}"%>
