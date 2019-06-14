@@ -4,6 +4,7 @@ class CreateEpisodes < ActiveRecord::Migration[5.0]
       t.date :date
       t.integer :number
 
+
       t.timestamps
     end
   end
