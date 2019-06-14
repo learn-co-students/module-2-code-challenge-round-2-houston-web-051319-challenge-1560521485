@@ -1,0 +1,20 @@
+<div>  
+ <h1> Create New Appearance <h1>
+<form method="POST" action="/episodes">
+    <div>
+          <label>Choose Episode</label>
+          <% episode_array = Episode.all.map { |episode| [episode.number, episode.id] } %>
+          <%= collection_select :guest_episode, :episode_id, Episode.all, :id, :number %>
+    </div>
+    <div>
+          <label>Choose Guest</label>
+          <% guest_array = Guest.all.map { |guest| [guest.name, guest.id] } %>
+          <%= collection_select :guest_episode, :guest_id, Guest.all, :id, :name %>
+    </div>
+    <div class="slidecontainer">
+          <label>Rate appearance </label>
+          <input type="range" min="1" max="5" value="guest_rating" class="slider" id="myRange">
+    </div>
+    <button>Submit</button>
+</form>
+</div>
