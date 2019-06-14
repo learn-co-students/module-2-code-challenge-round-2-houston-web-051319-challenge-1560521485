@@ -2,6 +2,11 @@
 
 <ul>
   <% @guests.each do |guest| %>
-    <li><%= guest.name %></li>
+    <li><a href = '/guests/<%=guest.id%>'><%= guest.name %></a></li>
+
   <% end %>
 </ul>
+
+<a href = '/guests/new'><button>Create Guest</button></a><br><br>
+<a href = '/episodes'><button>Episodes Index</button></a><br><br>
+<a href = '/appearances'><button>Appearance Index</button></a>

@@ -1,0 +1,18 @@
+<h1>All Appearances</h1>
+
+<ul>
+  <% @appearances.each do |appearance| %>
+    <li><%= "Appearance of #{appearance.guest.name} on #{appearance.episode.date} was rated #{appearance.guest_rating}"%></li>
+    <a href = '/appearances/<%=appearance.id%>'><button> - Appearance Page</button></a><br><br>
+
+
+  <% end %>
+</ul>
+
+<a href = '/appearances/new'><button>Create Appearance</button></a><br><br>
+<a href = '/guests'><button>Guest Index</button></a><br><br>
+<a href = '/episodes'><button>Episode Index</button></a>
+
+
+
+
